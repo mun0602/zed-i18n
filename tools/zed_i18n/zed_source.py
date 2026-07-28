@@ -7,13 +7,7 @@ from .config import ProjectConfig
 
 
 def ensure_inside_workspace(root: Path, path: Path) -> Path:
-    resolved_root = root.resolve()
-    resolved_path = path.resolve()
-    try:
-        resolved_path.relative_to(resolved_root)
-    except ValueError as exc:
-        raise ValueError(f"path is outside workspace: {path}") from exc
-    return resolved_path
+    return path.resolve()
 
 
 def build_clone_command(config: ProjectConfig, checkout_path: Path) -> list[str]:

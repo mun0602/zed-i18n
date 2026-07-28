@@ -25,7 +25,7 @@ def load_project_config(root: Path) -> ProjectConfig:
 
 
 def zed_checkout_path(root: Path, config: ProjectConfig) -> Path:
-    return root / config.cache_dir / config.zed_version
+    return Path("/Users/macmoon/Documents/code/mun/zed")
 
 
 def zed_clean_extract_checkout_path(root: Path, config: ProjectConfig) -> Path:

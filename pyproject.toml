@@ -5,6 +5,7 @@ description = "Tools for extracting, translating, and building localized Zed rel
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "deep-translator>=1.11.4",
     "tree-sitter>=0.25,<0.26",
     "tree-sitter-rust>=0.24,<0.25",
 ]
